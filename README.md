@@ -14,3 +14,10 @@ Ensure that the `if` statement reads like a sentence after you rename the functi
 1. The `values` parameter, given to the `validate...` function can be null.
 Currently, the code does not handle that.
 Ensure the code ignores a call with a null-parameter and add a test for that.
+
+
+## Done
+
+1. Removed duplications.
+2. Renamed the function.
+3. Null check handled and a null testcase added.
