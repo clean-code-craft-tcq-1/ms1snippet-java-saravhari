@@ -1,7 +1,9 @@
 package sensorval;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,5 +28,11 @@ public class SensorValidatorTest {
 	public void reportsErrorWhenNull() {
 		List<Double> currents = null;
 		assertFalse(SensorValidator.validateReadings(currents, 0.1));
+	}
+
+	@Test
+	public void reportsErrorWhenEmpty() {
+		List<Double> currents = new ArrayList<Double>();
+		assertTrue(SensorValidator.validateReadings(currents, 0.1));
 	}
 }
